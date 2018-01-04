@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 # dumb-init libldap nodejs postgresql-libs python2 py-flask-script py2-pip ruby
 
-RUN apk --no-cache add dumb-init python3 py3-psycopg2 py3-ldap3 gettext libstdc++
+RUN apk --no-cache add dumb-init python3 py3-psycopg2 py3-ldap3 gettext libstdc++ py-mysqldb
 
 RUN ln -s python3 /usr/bin/python && ln -s pip3 /usr/bin/pip
 
