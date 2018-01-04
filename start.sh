@@ -1,7 +1,7 @@
 #!/bin/sh
-cd "$(dirname "$0")"
+cd /bitpoll
 
 ./manage.py compilemessages
 rm -rf _static && ./manage.py collectstatic
 
-exec su daemon -c "./manage.py runserver --host=0.0.0.0 --port=8888"
+exec su daemon -s/bin/sh -c "./manage.py runserver 0.0.0.0:8888"
